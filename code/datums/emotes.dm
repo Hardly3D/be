@@ -11,6 +11,7 @@
 	var/message_monkey = "" //Message displayed if the user is a monkey
 	var/message_ipc = "" // Message to display if the user is an IPC
 	var/message_insect = "" //Message to display if the user is a moth, apid or flyperson
+	var/message_observer = "" //Message to display if the user is observing
 	var/message_simple = "" //Message to display if the user is a simple_animal
 	var/message_param = "" //Message to display if a param was given
 	/// Whether the emote is visible and/or audible bitflag
@@ -270,6 +271,8 @@
 		. = message_insect
 	else if((isanimal(user) || isbasicmob(user)) && message_simple)
 		. = message_simple
+	else if(!isliving(user))
+		. = message_observer
 
 	return .
 

@@ -93,6 +93,7 @@
 	key = "jump"
 	key_third_person = "jumps"
 	message = "jumps"
+	message_observer = "" // Makes jumping less spammy for ghosts
 	cooldown = 0.8 SECONDS
 	hands_use_check = TRUE
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
